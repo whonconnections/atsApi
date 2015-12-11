@@ -11,6 +11,7 @@ namespace atsApi.Models
         public UserLogEntity(string username, string userId)
         {
             this.PartitionKey = "1";
+            this.RowKey = Guid.NewGuid().ToString();
             this.Username = username;
             this.Id = userId;
         }
